@@ -1,0 +1,28 @@
+.blog-shortcode {
+  .vertical-item, .side-item {
+	&.format-chat {
+	  p {
+		padding: 0;
+		border: none !important;
+	  }
+	}
+  }
+  &.grid{
+	.side-item{
+	  @media(max-width: 991px){
+		&.transparent{
+		  .item-content{
+			padding-bottom: 0;
+		  }
+		}
+	  }
+	}
+	.vertical-item{
+	  &.transparent{
+		.item-content{
+		  padding-bottom: 0;
+		}
+	  }
+	}
+  }
+}

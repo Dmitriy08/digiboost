@@ -1,0 +1,46 @@
+/*
+** Special Heading
+*/
+.special-heading {
+  word-wrap: break-word;
+  line-height: 1;
+  margin: 0;
+  width: 100%;
+  margin-top: -7px !important;
+
+  & + p.special-heading {
+	margin-top: 15px !important;
+  }
+
+  span, mark {
+	display: inline-block;
+  }
+
+  & + .counter-heading {
+	margin-top: 25px !important;
+	@media(max-width: 991px) {
+	  margin-top: 15px !important;
+	}
+  }
+
+  &.counter-heading {
+	& + .special-heading {
+	  margin-top: 25px !important;
+	  @media(max-width: 991px) {
+		margin-top: 15px !important;
+	  }
+	}
+  }
+}
+
+p.special-heading {
+  + .special-heading {
+	margin-top: 15px !important;
+  }
+
+  .big {
+	font-size: 20px;
+  }
+}
+
+

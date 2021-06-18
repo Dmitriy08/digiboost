@@ -1,0 +1,403 @@
+/* 
+** Template Specific Styles
+*/
+
+#box_wrapper > section,
+#box_wrapper > div > section {
+  overflow: hidden;
+}
+
+#box_wrapper > section.page_topline,
+#box_wrapper > section.page_toplogo,
+#box_wrapper > section.overflow-visible,
+#box_wrapper > div > section.overflow-visible {
+  overflow: visible;
+}
+
+//divider-line-styled
+.fw-divider-line-styled {
+  border: none;
+  height: 2px;
+  max-width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  &.left-line{
+	margin-left: 0;
+	@media(max-width: 575px){
+	  margin-left: auto;
+	}
+  }
+  &.line-right{
+	margin-right: 0;
+	@media(max-width: 575px){
+	  margin-right: auto;
+	}
+  }
+}
+
+.fw-divider-word {
+  font-weight: 500;
+  color: $darkgreyColor;
+  margin: 0 25px;
+
+  @media(max-width: 575px) {
+	margin: 15px 0;
+	display: inline-block;
+  }
+}
+.fw-map-canvas{
+  @media(max-width: 575px){
+	height: 500px !important;
+  }
+}
+
+.page_map {
+  height: 500px;
+  text-align: center;
+
+  &.big-map {
+	height: 970px;
+	@media(max-width: 991px) {
+	  height: 500px;
+	}
+  }
+
+  .marker {
+	display: none;
+  }
+}
+
+.map_marker_description {
+  h3 {
+	line-height: 1;
+	margin-bottom: 10px;
+  }
+
+  max-width: 270px;
+
+  img {
+	max-width: 90% !important;
+  }
+}
+
+//styling google info window
+.gm-style .gm-style-iw {
+  overflow: visible !important;
+  text-align: center;
+  line-height: 1.6em;
+
+  & > *:first-child {
+	position: relative;
+  }
+
+  &:before {
+	content: '';
+	display: block;
+	position: absolute;
+	border-top: 2px solid $colorMain;
+	top: -25px;
+	left: -16px;
+	right: -16px;
+	bottom: -25px;
+	background: $lightColor;
+	box-shadow: $boxShadow;
+  }
+
+  .icon-inline {
+	display: inline-block;
+	margin: 0.3em 0;
+
+	.icon-styled {
+	  margin-right: 5px;
+
+	}
+  }
+}
+
+/*footer social buttons that hidden on half of their height*/
+.page_footer {
+  //for hidden social icons
+  overflow: hidden;
+  .widget_bloginfo{
+	.social-icons{
+	  margin-top: 60px;
+	  display: inline-block;
+	  @media(max-width: 575px){
+		margin-top: 20px;
+	  }
+	}
+	.description{
+	  margin-top: 10px;
+	}
+	.icons-list{
+	  overflow: hidden;
+		.list-bordered{
+			li{
+			  border: 0;
+			}
+		}
+	  ul{
+		margin-top: -15px;
+		margin-bottom: -15px;
+
+		li{
+		  .icon-inline{
+			@media(max-width: 575px){
+			  justify-content: center;
+			}
+		  }
+		}
+	  }
+	}
+	.list-bordered{
+	  li{
+		padding: 12px 0;
+	  }
+	}
+  }
+
+  .widget_product_categories{
+	overflow: hidden;
+	& > ul{
+	  margin-top: -20px;
+	  margin-bottom: -16px;
+	}
+	li{
+	border: 0;
+	  &:first-child{
+		border-top: none;
+	  }
+
+
+	  &:before{
+		display: none;
+	  }
+
+	}
+  }
+
+  .widget_archive, .widget_categories, .widget_nav_menu, .widget_meta, .widget_pages{
+	div{
+	  overflow: hidden;
+	  & > ul{
+		margin-top: -16px;
+		margin-bottom: -16px;
+	  }
+	}
+	li{
+		border: 0;
+	  a{
+
+		&:before{
+		  display: none;
+		}
+	  }
+	}
+  }
+
+  /*overriding Bootstrap Addons buttons*/
+  @media (min-width: 576px) {
+	a.border-icon:before,
+	a.bg-icon:before,
+	a.color-bg-icon:before {
+	  width: 4.20em;
+	  height: 4.20em;
+	  line-height: 4.20em;
+	}
+  }
+
+  .side-icon-box {
+	margin: 0 0 20px;
+
+	& > .icon-styled:first-child {
+	  margin-right: 0;
+	  position: relative;
+	  top: 0;
+	}
+
+	.icon-styled + .media-body {
+	  margin-left: 20px;
+	}
+  }
+}
+
+.page_copyright {
+  font-size: 14px;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+.content-absolute {
+  &.ls {
+	.item-content {
+	  background-color: rgba($lightColor, 0.7);
+	}
+  }
+
+  &.ls.ms {
+	.item-content {
+	  background-color: rgba($greyColor, 0.7);
+	}
+  }
+
+  &.ds {
+	.item-content {
+	  background-color: rgba($darkgreyColor, 0.7);
+	}
+  }
+
+  &.ds.ms {
+	.item-content {
+	  background-color: rgba($darkColor, 0.7);
+	}
+  }
+
+  &.cs {
+	.item-content {
+	  background-color: rgba($colorMain, 0.7);
+	}
+  }
+}
+
+.content-show-hover {
+  overflow: hidden;
+
+  .item-content {
+	opacity: 0;
+	transform: scale(0);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.375) 0s;
+  }
+
+  &:hover {
+	.item-content {
+	  transform: scale(1);
+	  opacity: 1;
+	}
+  }
+}
+
+.text-block {
+  @media(min-width: 576px) {
+	&.with-border {
+	  border-left: 4px solid $colorMain;
+	  padding-left: 30px;
+	}
+  }
+}
+
+.with-particles .particles-js {
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  display: block;
+  opacity: 0.4;
+  height: 100%;
+}
+
+.special-column-center{
+  @media(min-width: 1200px) {
+	max-width: 470px;
+	margin-left: auto;
+	margin-right: auto;
+  }
+}
+.special-column-center-second{
+
+  @media(min-width: 991px) {
+	padding-left: 30px;
+	padding-right: 30px;
+  }
+  @media(min-width: 1200px) {
+	padding-left: 0;
+	padding-right: 0;
+	max-width: 540px;
+	margin-left: auto;
+	margin-right: auto;
+  }
+}
+
+.special-column-space-left {
+  @media(min-width: 1200px) {
+	max-width: 410px;
+	margin-left: auto;
+  }
+}
+
+.special-column-up-right{
+  padding: 30px 15px 60px;
+  max-width: 120%;
+  margin-top: 0;
+  margin-right: -15px;
+  margin-left: -15px;
+  position: relative;
+  z-index: 555;
+  @media(min-width: 576px){
+	padding: 40px;
+	margin-top: -50px;
+	max-width: 85%;
+	margin-left: auto;
+	margin-right: auto;
+  }
+  @media (min-width: 992px) {
+	max-width: none;
+	margin-left: -100px;
+	padding: 30px;
+	margin-top: 0;
+
+  }
+  @media (min-width: 1200px) {
+	padding: 120px calc((100% - 460px) / 2);
+  }
+}
+
+.dropdown-shopping-cart{
+  .badge{
+	position: absolute;
+	border-radius: 50%;
+	padding: 3px;
+	width: 18px;
+	height: 18px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	line-height: 1;
+	font-weight: 500;
+	top: -8px;
+	left: -8px;
+	&:empty{
+	  padding: 0;
+	  width: 0;
+	  height: 0;
+	}
+  }
+  & > a{
+	width: 92px;
+	i{
+	  margin-right: 10px;
+	}
+  }
+}
+
+.team-single{
+  ul.list-styled{
+	@media(max-width: 575px){
+	  li{
+		display: inline-block;
+	  }
+	}
+  }
+}
+.portfolio-single{
+  position: relative;
+}
+.partners{
+	.owl-carousel{
+		img{
+			max-width: 55%;
+		}
+	}
+}

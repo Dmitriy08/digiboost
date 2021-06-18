@@ -1,0 +1,99 @@
+/* bootstrap breadcrumbs*/
+
+.breadcrumb {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border-radius: 0;
+  text-transform: capitalize;
+  font-size: 20px;
+
+  @media(max-width: 575px) {
+	justify-content: center;
+  }
+
+  & > li.breadcrumb-item {
+	display: inline-block;
+	padding: 0;
+	float: none;
+  }
+
+  @media (min-width: 992px) {
+	.text-lg-right & {
+	  justify-content: flex-end;
+	}
+  }
+}
+
+.breadcrumb > .active {
+  color: $colorMain;
+  font-weight: 500;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  content: '|';
+  padding: 0;
+  color: $lightColor;
+  margin: 0 18px;
+}
+
+.text-center:not(.text-sm-left) {
+  .breadcrumb {
+	justify-content: center;
+  }
+}
+
+.page_title {
+
+  h1, h2 {
+	margin-bottom: 0.25em;
+	line-height: 1.2;
+	font-size: 60px;
+	margin-top: -7px;
+	@media(max-width: 991px) {
+	  font-size: 40px;
+	}
+
+	&:last-child {
+	  margin-bottom: 0;
+	}
+  }
+
+  .small-title {
+	font-size: 40px;
+
+	& + .breadcrumb {
+	  font-size: 16px;
+	  letter-spacing: 0;
+	  text-transform: none;
+	  font-weight: 400;
+	}
+  }
+
+  @media (min-width: 992px) {
+	.title-inline {
+	  margin: 0;
+
+	  & + .breadcrumb {
+		padding-left: 30px;
+		margin-left: 30px;
+		border-left: 1px solid $lightColor;
+	  }
+	}
+  }
+
+  [class*="container"] > .breadcrumb {
+	position: absolute;
+	right: 15px;
+	bottom: 0;
+	padding: 0 15px;
+	background-color: $darkColor;
+
+	@media(max-width: 575px) {
+	  right: 15px;
+	  left: 15px;
+	}
+  }
+}
+
+

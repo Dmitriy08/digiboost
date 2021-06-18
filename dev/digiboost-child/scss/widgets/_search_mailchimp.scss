@@ -1,0 +1,102 @@
+/*
+widget_search,
+widget_mailchimp
+widget_product_search
+*/
+
+.widget_search,
+.widget_product_search,
+.widget_mc4wp_form_widget,
+.widget_mailchimp {
+
+  .form-group {
+	margin-bottom: 0;
+  }
+
+  form {
+	position: relative;
+  }
+
+  label {
+	margin: 0;
+	padding: 0;
+	display: inline;
+  }
+}
+
+
+//buttons and icons inside a form to the right
+.widget_search button,
+.widget_mailchimp button,
+.widget_mc4wp_form_widget button,
+  //input instead of button is used in woo html
+.widget_product_search  button {
+  position: absolute;
+  right: 5px;
+  top: 7px;
+  border: none;
+  padding: 0;
+  margin: 0;
+  min-width: auto;
+  font-size: 0;
+  &:after{
+	content: '\f002';
+	font-family: 'FontAwesome';
+	font-size: 14px;
+  }
+  &:hover{
+	background-color: transparent;
+	&:after{
+	  color: $colorMain;
+	}
+  }
+}
+
+.widget_mc4wp_form_widget, .widget_mailchimp{
+  button{
+	&:after{
+	  content: '\f0e0';
+	}
+  }
+}
+.mc4wp-response{
+  margin-top: 5px;
+}
+
+.shortcode-widget-area{
+  @media(max-width: 991px){
+	margin: 0;
+	max-width: none;
+  }
+  .widget_mc4wp_form_widget{
+	.mc4wp-form-fields{
+	  display: flex;
+	  align-items: flex-end;
+	}
+	.form-group{
+	  max-width: 370px;
+	  width: 100%;
+	  @media(max-width: 575px){
+		max-width: 100%;
+	  }
+	}
+	button{
+	  @media(min-width: 576px){
+		position: static;
+		min-width: 150px;
+		padding: 15px 35px;
+		font-size: 16px;
+		border: 2px solid $colorMain;
+		top: 0;
+		margin-left: 20px;
+		&:hover{
+		  background: $colorMain;
+		}
+		&:after{
+		  display: none;
+		}
+	  }
+
+	}
+  }
+}

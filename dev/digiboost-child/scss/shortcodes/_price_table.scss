@@ -1,0 +1,168 @@
+.pricing-plan {
+  text-align: center;
+  padding: 70px 60px;
+  transition: transform 0.6s ease-in-out, box-shadow 0.6s ease-in-out;
+
+  &:hover {
+	transform: translateY(-15px);
+	box-shadow: 0px 8px 12px 3px rgba(0, 0, 0, 0.35);
+  }
+
+  .plan-header {
+	line-height: 0.8;
+	margin-bottom: 40px;
+
+	&[class*='bg-'] {
+	  padding: 30px 0;
+	  margin-left: -60px;
+	  margin-right: -60px;
+	  margin-top: -70px;
+	}
+  }
+
+  .plan-title {
+	font-size: 20px;
+	margin-bottom: 15px;
+  }
+
+
+  .price-wrap {
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	font-size: 70px;
+	flex-wrap: wrap;
+	line-height: 0.8;
+	font-weight: 300;
+
+	&[class*='bg-'] {
+	  padding: 30px 0;
+	  margin-left: -60px;
+	  margin-right: -60px;
+
+	  .plan-price {
+		color: $lightColor;
+	  }
+	}
+
+	.plan-price {
+	  color: $colorMain;
+	  font-weight: 500;
+	}
+
+	.plan-sign {
+	  font-size: 40px;
+	  position: relative;
+	  top: -24px;
+	}
+
+	.plan-decimals {
+	  font-size: 30px;
+	}
+
+  }
+
+  .plan-features {
+	margin: 40px 0;
+
+	ul {
+	  display: flex;
+	  flex-direction: column;
+	  justify-content: center;
+	  align-items: center;
+
+	  li {
+		display: block;
+		padding-left: 25px;
+
+		&.enabled {
+		  &:before {
+			content: '\f00c';
+			font-size: 16px;
+			top: 4px;
+		  }
+		}
+
+		&.disabled {
+		  text-decoration: line-through;
+
+		  &:before {
+			content: '\f00d';
+			font-size: 16px;
+			top: 4px;
+		  }
+		}
+	  }
+	}
+  }
+
+  .plan-button {
+	margin-top: 40px;
+
+	.btn {
+	  margin-bottom: 0;
+	}
+  }
+
+  @media(max-width: 1199px) {
+	padding: 45px 40px;
+	.price-wrap {
+	  &[class*='bg-'] {
+		margin-left: -40px;
+		margin-right: -40px;
+	  }
+	}
+	.plan-features {
+	  margin: 30px 0 20px;
+	}
+
+	.plan-header {
+	  margin-bottom: 30px;
+
+	  &[class*='bg-'] {
+		margin-left: -40px;
+		margin-right: -40px;
+		margin-top: -45px;
+	  }
+	}
+  }
+}
+
+.cs {
+  background-color: $colorMain;
+
+  .price-wrap {
+	.plan-price {
+	  color: $lightColor;
+	}
+
+	&[class*='bg-'] {
+	  background-color: $lightColor;
+
+	  .plan-price {
+		color: $colorMain;
+	  }
+	}
+  }
+
+  .plan-title {
+	color: $darkgreyColor;
+  }
+
+  .plan-header {
+	&[class*='bg-'] {
+	  background-color: $lightColor;
+	}
+  }
+
+  .plan-features {
+	ul {
+	  li {
+		&:before {
+		  color: $lightColor;
+		}
+	  }
+	}
+  }
+}
+

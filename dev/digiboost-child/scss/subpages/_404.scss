@@ -1,0 +1,26 @@
+/*
+** 404
+*/
+
+.page_404 {
+
+  .container {
+	min-height: calc(100vh - 61px - 70px);
+  }
+
+  .main-text-404 {
+	font-size: 300px;
+
+	line-height: 1;
+	@media(max-width: 575px) {
+	  font-size: 100px;
+	}
+  }
+
+  p {
+  font-size: 40px;
+	@media(max-width: 575px) {
+	  font-size: 20px;
+	}
+  }
+}

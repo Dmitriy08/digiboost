@@ -1,0 +1,30 @@
+/* widget_tag_cloud */
+.tagcloud, [class*='-block-tag-cloud'] {
+  a {
+    border: 2px solid $colorMain;
+    border-radius: 0;
+    padding: 4px 25px;
+    margin: 0 6px 10px 0;
+    text-align: center;
+    display: inline-block;
+    letter-spacing: 0;
+    text-transform: capitalize;
+    line-height: 1;
+    font-size: 16px !important;
+    color: $darkgreyColor !important;
+    font-weight: 500;
+    &:hover {
+      background-color: $colorMain;
+      border-color: $colorMain;
+      color: $darkgreyColor ;
+    }
+  }
+}
+
+.ds{
+  .tagcloud, [class*='-block-tag-cloud'] {
+    a {
+      color: $lightColor !important;
+    }
+  }
+}

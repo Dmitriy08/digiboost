@@ -1,0 +1,49 @@
+.cs {
+
+  .btn-action {
+    i {
+      color: $darkgreyColor;
+    }
+    background-color: $lightColor;
+    &:hover i {
+      opacity: 0.7;
+    }
+  }
+  .form-control:focus {
+    background-color: transparent;
+  }
+
+  .form-control:-moz-placeholder {
+    color: $lightColor;
+  }
+
+  .form-control::-moz-placeholder {
+    color: $lightColor;
+
+  }
+
+  .form-control:-ms-input-placeholder {
+    color: $lightColor;
+  }
+
+  .form-control::-webkit-input-placeholder {
+    color: $lightColor;
+  }
+
+  .form-control:focus:-moz-placeholder {
+    color: transparent;
+  }
+
+  .form-control:focus::-moz-placeholder {
+    color: transparent;
+  }
+
+  .form-control:focus:-ms-input-placeholder {
+    color: transparent;
+  }
+
+  .form-control:focus::-webkit-input-placeholder {
+    color: transparent;
+  }
+
+}

@@ -1,0 +1,15 @@
+.shortcode-team {
+  /***ITEM TEAM***/
+  .item-team {
+    &.content-up{
+      .item-content{
+        h5{
+          margin-bottom: 5px;
+        }
+        .small-text{
+          margin-bottom: 1.2em;
+        }
+      }
+    }
+  }
+}
